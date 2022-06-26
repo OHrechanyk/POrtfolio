@@ -5,8 +5,16 @@
   --backgruond-color: #ffffff;
   --footer-bg-color: #2f303a;
 }
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+  margin: 0;
+}
 ul {
   list-style: none;
+  margin-top: 0;
 }
 
 body {
@@ -15,12 +23,27 @@ body {
   letter-spacing: 0.03em;
   font-size: 14px;
 }
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 94px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  outline: 2px solid tomato;
+}
 
 .section {
   color: var(--text-color);
+  /* padding-top: 94px; */
+  /* padding-bottom: 94px; */
 }
 .section-title {
   color: var(--title-color);
+}
+.main-nav {
+  display: flex;
 }
 
 /* Logo  */
@@ -31,6 +54,9 @@ body {
   line-height: 1.19;
   text-decoration: none;
   font-style: normal;
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .accent-web {
   color: #2196f3;
@@ -40,10 +66,23 @@ body {
 }
 
 .site-nav {
+  display: flex;
+  margin-left: 93px;
+
   color: var(--title-color);
+}
+.site-nav .item {
+  margin-right: 50px;
+}
+.site-nav .item:last-child {
+  margin-right: 0;
 }
 .nav {
   color: var(--title-color);
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  list-style: none;
 }
 
 .site-nav .nav:focus,
@@ -89,6 +128,9 @@ body {
 }
 .mail {
   font-weight: 500;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -96,10 +138,21 @@ body {
 }
 .tel {
   font-weight: 500;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+}
+.contacts-header {
+  display: flex;
+  align-self: flex-end;
+  margin-left: auto;
+}
+.contacts-header .item + .item {
+  margin-left: 50px;
 }
 
 /* Hero tittle */
@@ -111,13 +164,19 @@ body {
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  margin-bottom: 30px;
 }
 .bg-hero {
   background-color: var(--footer-bg-color);
+  text-align: center;
 }
 .hero-button {
   color: var(--backgruond-color);
   background-color: var(--accent-color);
+  width: 200px;
+  height: 50px;
+  border: 1px solid var(--accent-color);
+  border-radius: 4px;
 }
 
 /* О нас */
@@ -127,10 +186,18 @@ body {
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.list {
+  display: flex;
+  justify-content: space-between;
 }
 
 .text {
   line-height: 1.71;
+  margin-top: 0;
+  width: 270px;
+  height: 75px;
 }
 
 /* Чем занимаемся */
@@ -139,17 +206,21 @@ body {
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 /* Команда*/
+
 .team {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
+  margin-top: 30px;
 }
 .description-team {
   font-size: 16px;
   line-height: 1.18;
+  margin-top: 10px;
 }
 
 /* Footer */
@@ -167,12 +238,20 @@ body {
   text-decoration: none;
   font-style: normal;
   color: var(--backgruond-color);
+  margin-top: 20px;
 }
 .mail-tel {
   line-height: 1.7;
   text-decoration: none;
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
+}
+.footer-mail {
+  margin-top: 9px;
+}
+.footer-tel {
+  margin-top: 9px;
+  margin-bottom: 60px;
 }
 
 /* Страница Портфолио */
@@ -182,10 +261,12 @@ body {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin-top: 20px;
 }
 .portfolio-text {
   font-size: 16px;
   line-height: 1.8;
+  margin-top: 4px;
 }
 
 /* Навигация Портфолио */
@@ -195,10 +276,12 @@ body {
   font-size: 16px;
   line-height: 1.6;
   background-color: #f5f4fa;
-  border: none;
+  border: 1px solid transparent var(--accent-color);
+  border-radius: 4px;
+  width: 128px;
+  height: 38px;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
 }
 .contacts-portfolio:hover,
 .contacts-portfolio:focus {
